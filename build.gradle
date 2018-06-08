@@ -25,9 +25,16 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	runtime('org.postgresql:postgresql')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+//	runtime('org.postgresql:postgresql')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+	// jdbc
+	compile 'org.postgresql:postgresql:42.2.2'
+	// redis
+// compile 'org.springframework.session:spring-session-data-redis'
+	// commons-lang
+	compile 'org.apache.commons:commons-lang3:3.0'
 }
