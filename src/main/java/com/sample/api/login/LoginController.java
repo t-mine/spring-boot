@@ -20,7 +20,10 @@ public class LoginController {
 	LoginService loginService;
 
 	@RequestMapping(method = RequestMethod.POST)
-	public LoginResponseDto postLogin(@RequestParam("id") String id, @RequestParam("password") String password) {
+	public LoginResponseDto postLogin(
+		@RequestParam("id") String id,
+		@RequestParam("password") String password
+	) {
 		// ログイン処理
 		HttpStatus status = loginService.login(id, password);
 		// レスポンス

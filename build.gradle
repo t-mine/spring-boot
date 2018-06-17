@@ -1,13 +1,7 @@
 buildscript {
-	ext {
-		springBootVersion = '2.0.1.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+	ext {springBootVersion = '2.0.1.RELEASE'}
+	repositories {mavenCentral()}
+	dependencies {classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")}
 }
 
 apply plugin: 'java'
@@ -23,18 +17,12 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-//	runtime('org.postgresql:postgresql')
+	compile('org.springframework.boot:spring-boot-starter-aop')
+	compile('org.postgresql:postgresql:42.2.2')
+	compile('org.apache.commons:commons-lang3:3.0')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-
-	// jdbc
-	compile 'org.postgresql:postgresql:42.2.2'
-	// redis
-// compile 'org.springframework.session:spring-session-data-redis'
-	// commons-lang
-	compile 'org.apache.commons:commons-lang3:3.0'
 }
