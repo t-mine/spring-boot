@@ -1,4 +1,4 @@
-package com.sample.api.login;
+package com.sample.exception;
 
 import com.sample.base.ResponseDto;
 
@@ -7,6 +7,6 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper=false)
-public class LoginResponseDto extends ResponseDto {
-	String sessionId;
+public class ExceptionResponseDto extends ResponseDto {
+	private String error;
 }

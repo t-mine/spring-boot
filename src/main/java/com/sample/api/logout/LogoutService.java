@@ -13,6 +13,7 @@ public class LogoutService {
   public HttpStatus logout(HttpServletRequest request) {
 	  HttpSession session = request.getSession(false);
 	  if (session == null) {
+		  // TODO 
 		  return HttpStatus.UNAUTHORIZED;
 	  }
 	  session.invalidate();
